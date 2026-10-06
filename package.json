@@ -1,0 +1,19 @@
+{
+  "name": "objlink-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "自定义 JSON 目标文件离线链接后端 (API + CLI)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/linker.test.js dist/test/store.test.js",
+    "start": "npm run build && node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo",
+    "cli": "node dist/src/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}
+

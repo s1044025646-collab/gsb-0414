@@ -1,0 +1,19 @@
+{
+  "modules": [
+    {
+      "name": "甲",
+      "text": { "bytes": "0000000000000000", "align": 4 },
+      "data": { "bytes": "aabb", "align": 4 },
+      "relocations": [
+        { "section": "text", "offset": 0, "type": "PCREL32", "symbol": "foo", "addend": 0 },
+        { "section": "text", "offset": 4, "type": "ABS32", "symbol": "foo", "addend": 0 }
+      ]
+    },
+    {
+      "name": "乙",
+      "text": { "bytes": "c3", "align": 4 },
+      "data": { "bytes": "0102", "align": 16 },
+      "symbols": [ { "name": "foo", "section": "text", "offset": 0 } ]
+    }
+  ]
+}
